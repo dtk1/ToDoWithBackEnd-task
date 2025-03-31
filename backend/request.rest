@@ -1,0 +1,46 @@
+###  Регистрация
+POST http://localhost:4000/register
+Content-Type: application/json
+
+{
+  "email": "kaitlegenov@gmail.com",
+  "password": "daulet123"
+}
+
+###  Вход
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "email": "test@mail.com",
+  "password": "test123"
+}
+
+###  Обновить accessToken
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NDM0MzIxNTB9.DRGx3csDc6TeaMP8TeotPVaOv4r5j603FRL_VJEXdk0"
+}
+
+###  Выйти (удалить refreshToken)
+POST http://localhost:4000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NDMwNzE1NDUsImV4cCI6MTc0MzA3MTU2MH0.23TyQj7B22eiNFagMYPr26cYyBL05X8pASunMfCIN4g"
+}
+
+###
+GET http://localhost:4000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NDMwNzMwOTAsImV4cCI6MTc0MzA3MzE1MH0.6eJuCcbN6RD3LFsfO8xOPtwXZJmeRyYhgZDJbihyJWI
+
+###
+POST http://localhost:4000/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJpYXQiOjE3NDM0MzIxNjcsImV4cCI6MTc0MzQzMjIyN30.22sfNikFdZPdaMVOAP77S3ckDdAB3wgJ-yfUAOrb-y4
+Content-Type: application/json
+
+{
+  "text": "Finish nFactorial project"
+}
